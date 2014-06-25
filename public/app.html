@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    </head>
+    <body>
+        
+        
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-8">.col-xs-12 .col-sm-6 .col-md-8</div>
+            <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+        </div>
+        <div class="row">
+            <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
+            <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
+            <!-- Optional: clear the XS cols if their content doesn't match in height -->
+            <div class="clearfix visible-xs"></div>
+            <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
+        </div>
+        
+        
+        
+        <div class="container" id='radioContainerDiv'>
+            <h2><span class="glyphicon glyphicon-music"></span> democrad.io</h2>
+
+            <div class="btn-group">
+                <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">Sort <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#" id="sortbylikes"><span class="glyphicon glyphicon-thumbs-up"></span> Most liked</a>
+                    </li>
+                    <li><a href="#" id="sortbydate"><span class="glyphicon glyphicon-time"></span> By date</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <button type="button" class="btn btn-danger" id="stopAudio">Stop Audio</button>
+
+            <h4>Click the radio entry to start playing the station</h4>
+            <div class="list-group" id="radioList">
+                <a href="#" class="list-group-item" id="1">
+                    <strong>Eins Live</strong> - added on 06/22/2014
+                </a>
+                <a href="#" class="list-group-item" id="2">
+                    <strong>KROQ</strong> - added on 06/25/2014
+                </a>
+            </div>
+        </div>
+
+        <div class="container" id="inputs">
+            <h2>Add a new station</h2>
+            <input type='text' class="form-control" id='stationNameInput' placeholder='Station Name'>
+            <div class="input-group">
+                <input type="text" class="form-control" id="stationURLInput" placeholder="Station URL">
+                <span class="input-group-btn">
+                            <button class="btn btn-success" type="button" id="submitStation"><span class="glyphicon glyphicon-music"></span> Submit Station</button>
+                </span>
+            </div>
+        </div>
+        
+        
+        
+        
+        
+        
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+        <script src="js/lib/handlebars-v1.3.0.js"></script>
+        
+        <script src="js/app.js"></script>
+    </body>
+</html>
