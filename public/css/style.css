@@ -1,0 +1,11 @@
+#volumeSlider .slider-selection {
+	background: #d9d9d9;
+}
+
+#volumeSlider .slider-handle {
+	background: #0ca035;
+}
+
+#volumeSlider {
+	width: 200px;
+}

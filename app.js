@@ -5,8 +5,15 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
-var routes = require('./routes/index');
-var users = require('./routes/users');
+// setting up the NeDB databases
+var Datastore = require('nedb');
+var radiostationsDB = new Datastore({ filename: 'data/radiostations.db', autoload: true });
+var configDB = new Datastore({ filename: 'data/config.db', autoload: true });
+
+
+// not using jade here, skipping the default index route
+//var routes = require('./routes/index');
+var radio = require('./routes/radio');
 
 var app = express();
 
@@ -21,8 +28,8 @@ app.use(bodyParser.urlencoded());
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', routes);
-app.use('/users', users);
+//app.use('/', routes);
+app.use('/radio', radio);
 
 /// catch 404 and forward to error handler
 app.use(function(req, res, next) {
